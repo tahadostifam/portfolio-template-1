@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tahadostifam.ir</title>
+    <link rel="stylesheet" href="./assets/css/styles.css">
+    <meta name="description" content="junior javascript developer">
+    <meta name="keywords" content="tahadostifam, طاها دوستی فام, javascript, nodejs, vue, nuxt, linux, mongodb, sql, dart, flutter, full stack, developer, development">
+</head>
+<body>
+    <div id="app">
+        <div id="mobile-navbar">
+            <a class="header-item active" href="/">
+                <ion-icon name="person-outline"></ion-icon>
+            </a>
+            <a class="header-item" href="/resume.html">
+                <ion-icon name="document-text-outline"></ion-icon>
+            </a>
+            <a class="header-item" href="/works.html">
+                <ion-icon name="cube-outline"></ion-icon>
+            </a>
+        </div>
+        <div class="image_header"></div>
+        <div class="main_content">
+            <div id="header-left" class="box">
+                <a class="header-item active" href="/">
+                    <ion-icon name="person-outline"></ion-icon>
+                </a>
+                <a class="header-item" href="/resume.html">
+                    <ion-icon name="document-text-outline"></ion-icon>
+                </a>
+                <a class="header-item" href="/works.html">
+                    <ion-icon name="cube-outline"></ion-icon>
+                </a>
+            </div>
+            <div class="top-section box">
+                <div id="profile_photo"></div>
+                <div id="profile_details">
+                    <h1 id="profile_name">Taha Dostifam</h1>
+                    <h2 id="profile_subname">Full-Stack Developer</h2>
+                    <div id="social_media_section" v-if="data != null">
+                        <a :href="'https://www.instagram.com/' + data.instagram" class="social_media_item">
+                            <ion-icon name="logo-instagram"></ion-icon>
+                        </a>
+                        <a :href="'https://wa.me/' + data.whatsapp" class="social_media_item">
+                            <ion-icon name="logo-whatsapp"></ion-icon>
+                        </a>
+                        <a :href="'https://github.com/' + data.github" class="social_media_item">
+                            <ion-icon name="logo-github"></ion-icon>
+                        </a>
+                    </div>
+                </div>
+                <div class="vertical-separator"></div>
+                <div id="other_info">
+                    <div class="row">
+                        <div class="col">
+                            <h2 class="header-sm">EMAIL</h2>
+                            <span class="span-sm text-type">mr.tahadostifam@gmail.com</span>
+                        </div>
+                        <div class="col">
+                            <h2 class="header-sm">BIRTHDAY</h2>
+                            <span class="span-sm text-type">24 March, 2007</span>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <h2 class="header-sm">PHONE</h2>
+                            <span class="span-sm text-type">+98 936 839 2346</span>
+                        </div>
+                        <div class="col">
+                            <h2 class="header-sm">LOCATION</h2>
+                            <span class="span-sm text-type">Bonab, Iran</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <main id="content_box" class="box">
+                <div id="IndexPage">
+                    <div>
+                        <h1 class="header header-with-border">About Me</h1>
+                        <p v-if="data != null" class="text">{{data.about.text}}</p>
+                    </div>
+                    <div style="margin-top: 20px">
+                        <h1 class="header">What I'm Doing</h1>
+                        <div class="row-to-column-mb">
+                            <div class="row">
+                                <div class="case-item">
+                                    <div class="case-item-icon">
+                                        <ion-icon name="desktop-outline"></ion-icon>
+                                    </div>
+                                    <h1 class="case-item-header">Web Design</h1>
+                                </div>
+                                <div class="case-item">
+                                    <div class="case-item-icon">
+                                        <ion-icon name="code-outline"></ion-icon>
+                                    </div>
+                                    <h1 class="case-item-header">Web Development</h1>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="case-item">
+                                    <div class="case-item-icon">
+                                        <ion-icon name="phone-portrait-outline"></ion-icon>
+                                    </div>
+                                    <h1 class="case-item-header">Mobile Apps</h1>
+                                </div>
+                                <div class="case-item">
+                                    <div class="case-item-icon">
+                                        <ion-icon name="terminal-outline"></ion-icon>
+                                    </div>
+                                    <h1 class="case-item-header">Linux</h1>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+    <script src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <script src="./assets/js/axios.min.js"></script>
+    <script src="./assets/js/vue.min.js"></script>
+    <script src="./assets/js/scripts.js"></script>
+</body>
+</html>
